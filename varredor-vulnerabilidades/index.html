@@ -1,0 +1,40 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Varredor de Vulnerabilidades</title><link rel="stylesheet" href="/_runtime/app.css"><meta name="theme-color" content="#060b16"></head><body>
+<script>
+window.APP={
+ repo:"varredor-vulnerabilidades", family:"varredor-vulnerabilidades", title:"Varredor Inteligente de Vulnerabilidades",
+ lead:"Triagem estática que procura entrada não confiável (req, query, argv) chegando a funções perigosas: execução de comandos, caminhos de arquivo, SQL e outras. Aceita JS/TS, Python, Go e Java.",
+ entry:"scanner.py", files:["scanner.py"], extractZip:true, selftest:["--test"],
+ accept:".js,.jsx,.ts,.tsx,.py,.go,.java,.json,.zip", acceptLabel:"código JS/TS, Python, Go, Java ou um ZIP",
+ args:(dir)=>[dir],
+ tech:"Python 3 (biblioteca padrão) · Pyodide/WebAssembly", license:"MIT",
+ refs:'<a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank" rel="noopener">CWE-78</a> · <a href="https://cwe.mitre.org/data/definitions/22.html" target="_blank" rel="noopener">CWE-22</a> · <a href="https://owasp.org/Top10/" target="_blank" rel="noopener">OWASP Top 10</a>',
+ note:"Triagem por padrões: serve para priorizar onde olhar, não para provar exploração. O código enviado fica só na memória do seu navegador.",
+ samples:[
+  {label:"API Express (JS)",name:"rotas.js",code:`const express = require('express');
+const { exec } = require('child_process');
+const fs = require('fs');
+const app = express();
+
+// executa um ping no host informado
+app.get('/ping', (req, res) => {
+  exec('ping -c 1 ' + req.query.host, (err, out) => res.send(out));
+});
+
+// devolve um arquivo de relatório
+app.get('/relatorio', (req, res) => {
+  res.send(fs.readFileSync('./relatorios/' + req.query.nome, 'utf8'));
+});
+
+app.listen(3000);
+`},
+  {label:"script Python",name:"ferramenta.py",code:`import subprocess
+import sys
+
+alvo = sys.argv[1]
+# monta o comando com a entrada do usuário
+subprocess.run("nslookup " + alvo, shell=True)
+
+with open("/var/dados/" + sys.argv[2]) as f:
+    print(f.read())
+`}]};
+</script><script src="/_runtime/runner.js" defer></script></body></html>

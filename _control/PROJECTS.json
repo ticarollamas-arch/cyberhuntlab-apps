@@ -1,0 +1,1268 @@
+{
+ "atualizado": "2026-11-24",
+ "repositorios": [
+  {
+   "repo": "CWE-Cover-2.0",
+   "familia": "cwe-cover",
+   "categoria": "seg",
+   "status": "requer-backend",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [],
+   "proximo_passo": "avaliar funções serverless ou VPS",
+   "commit": "1bffe4e"
+  },
+  {
+   "repo": "varredor-vulnerabilidades",
+   "familia": "varredor-vulnerabilidades",
+   "categoria": "seg",
+   "status": "integrado",
+   "rota": "/varredor-vulnerabilidades/",
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "validar no navegador após o deploy",
+   "commit": "4c675b1"
+  },
+  {
+   "repo": "go-traversal-detector",
+   "familia": "go-traversal-detector",
+   "categoria": "seg",
+   "status": "integrado",
+   "rota": "/go-traversal-detector/",
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "validar no navegador após o deploy",
+   "commit": "f929474"
+  },
+  {
+   "repo": "scanner-vulnerabilidades",
+   "familia": "cyber-hunt-scanner",
+   "categoria": "seg",
+   "status": "integrado",
+   "rota": "/scanner-vulnerabilidades/",
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "validar no navegador após o deploy",
+   "commit": "d1d0152"
+  },
+  {
+   "repo": "aegis-scout",
+   "familia": "aegis",
+   "categoria": "seg",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "725a40d"
+  },
+  {
+   "repo": "aegis-audit",
+   "familia": "aegis",
+   "categoria": "seg",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "a9dffc5"
+  },
+  {
+   "repo": "aegis-vrp",
+   "familia": "aegis",
+   "categoria": "seg",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "5911c88"
+  },
+  {
+   "repo": "aegis-agent",
+   "familia": "aegis",
+   "categoria": "seg",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "74b543e"
+  },
+  {
+   "repo": "aegis-agent-l",
+   "familia": "aegis",
+   "categoria": "seg",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "18688e7"
+  },
+  {
+   "repo": "30agents-crewai",
+   "familia": "aegis",
+   "categoria": "seg",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "1e8c30a"
+  },
+  {
+   "repo": "netaudit-cli",
+   "familia": "aegis",
+   "categoria": "seg",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "80c835f"
+  },
+  {
+   "repo": "sentinel_auditoria_vercel",
+   "familia": "sentinel",
+   "categoria": "seg",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "node",
+   "backend": false,
+   "variaveis": [
+    "GEMINI_API_KEY",
+    "OPENAI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY, OPENAI_API_KEY",
+   "commit": "cbee355"
+  },
+  {
+   "repo": "sentinel_auditoria_vercel_v2",
+   "familia": "sentinel",
+   "categoria": "seg",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "node",
+   "backend": false,
+   "variaveis": [
+    "GEMINI_API_KEY",
+    "OPENAI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY, OPENAI_API_KEY",
+   "commit": "4071e57"
+  },
+  {
+   "repo": "sentinel_ai_chat_vercel",
+   "familia": "sentinel",
+   "categoria": "seg",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "node",
+   "backend": false,
+   "variaveis": [
+    "OPENAI_API_KEY",
+    "SHANNON_BRIDGE_TOKEN",
+    "STRIX_BRIDGE_TOKEN"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: OPENAI_API_KEY, SHANNON_BRIDGE_TOKEN, STRIX_BRIDGE_TOKEN",
+   "commit": "678ea78"
+  },
+  {
+   "repo": "cyberhuntlab-2026-termux-pipeline",
+   "familia": "termux-headers",
+   "categoria": "seg",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "a7b62fb"
+  },
+  {
+   "repo": "security-writeups",
+   "familia": "pesquisa",
+   "categoria": "seg",
+   "status": "estatico-ou-docs",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar publicação estática",
+   "commit": "75ce817"
+  },
+  {
+   "repo": "lab-path-traversal",
+   "familia": "pesquisa",
+   "categoria": "seg",
+   "status": "sem-codigo",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "publicar o código no repositório",
+   "commit": "30215e5"
+  },
+  {
+   "repo": "pipeline-devsecops",
+   "familia": "pesquisa",
+   "categoria": "seg",
+   "status": "sem-codigo",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "publicar o código no repositório",
+   "commit": "db246b2"
+  },
+  {
+   "repo": "Engenheiro-Reverso",
+   "familia": "engenheiro-reverso",
+   "categoria": "rev",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "DEEPSEEK_API_KEY",
+    "GEMINI_API_KEY",
+    "GROQ_API_KEY",
+    "NVIDIA_API_KEY",
+    "OPENAI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: DEEPSEEK_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, NVIDIA_API_KEY, OPENAI_API_KEY",
+   "commit": "28cf402"
+  },
+  {
+   "repo": "carol_reverse_engineering_engine_corrigido",
+   "familia": "engenheiro-reverso",
+   "categoria": "rev",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "DEEPSEEK_API_KEY",
+    "GEMINI_API_KEY",
+    "GROQ_API_KEY",
+    "NVIDIA_API_KEY",
+    "OPENAI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: DEEPSEEK_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, NVIDIA_API_KEY, OPENAI_API_KEY",
+   "commit": "27dc76d"
+  },
+  {
+   "repo": "Engenharia-Reversa",
+   "familia": "engenheiro-reverso",
+   "categoria": "rev",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY",
+   "commit": "68ac51b"
+  },
+  {
+   "repo": "projeto_carol-gemini-only",
+   "familia": "engenheiro-reverso",
+   "categoria": "rev",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY",
+   "commit": "ba68dc6"
+  },
+  {
+   "repo": "Descontrutor-Reverso",
+   "familia": "engenheiro-reverso",
+   "categoria": "rev",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "DEEPSEEK_API_KEY",
+    "GEMINI_API_KEY",
+    "GROQ_API_KEY",
+    "NVIDIA_API_KEY",
+    "OLLAMA_API_KEY",
+    "OPENAI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: DEEPSEEK_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, NVIDIA_API_KEY, OLLAMA_API_KEY, OPENAI_API_KEY",
+   "commit": "c2c8d67"
+  },
+  {
+   "repo": "projeto_carol_corrigido",
+   "familia": "engenheiro-reverso",
+   "categoria": "rev",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "CUSTOM_AI_API_KEY",
+    "DEEPSEEK_API_KEY",
+    "GEMINI_API_KEY",
+    "GROQ_API_KEY",
+    "NVIDIA_API_KEY",
+    "OPENAI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: CUSTOM_AI_API_KEY, DEEPSEEK_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, NVIDIA_API_KEY, OPENAI_API_KEY",
+   "commit": "b816d1e"
+  },
+  {
+   "repo": "projeto_carol-corrigido-ollama",
+   "familia": "engenheiro-reverso",
+   "categoria": "rev",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "DEEPSEEK_API_KEY",
+    "GEMINI_API_KEY",
+    "GROQ_API_KEY",
+    "NVIDIA_API_KEY",
+    "OLLAMA_API_KEY",
+    "OPENAI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: DEEPSEEK_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, NVIDIA_API_KEY, OLLAMA_API_KEY, OPENAI_API_KEY",
+   "commit": "5a91671"
+  },
+  {
+   "repo": "cyber-hunter-lab-integrated-v2",
+   "familia": "cyberhuntlab-plataforma",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "next",
+   "backend": false,
+   "variaveis": [
+    "APP_ACCESS_TOKEN",
+    "GITHUB_TOKEN",
+    "GROQ_API_KEY",
+    "NINEROUTER_API_KEY",
+    "OPENAI_API_KEY",
+    "S3_ACCESS_KEY_ID",
+    "S3_SECRET_ACCESS_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: APP_ACCESS_TOKEN, GITHUB_TOKEN, GROQ_API_KEY, NINEROUTER_API_KEY, OPENAI_API_KEY, S3_ACCESS_KEY_ID",
+   "commit": "359f42c"
+  },
+  {
+   "repo": "cyberhuntlab-v1-1-0--1-",
+   "familia": "cyberhuntlab-plataforma",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "next",
+   "backend": false,
+   "variaveis": [
+    "APP_ACCESS_TOKEN",
+    "GITHUB_TOKEN",
+    "GROQ_API_KEY",
+    "NINEROUTER_API_KEY",
+    "OPENAI_API_KEY",
+    "S3_ACCESS_KEY_ID",
+    "S3_SECRET_ACCESS_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: APP_ACCESS_TOKEN, GITHUB_TOKEN, GROQ_API_KEY, NINEROUTER_API_KEY, OPENAI_API_KEY, S3_ACCESS_KEY_ID",
+   "commit": "5335877"
+  },
+  {
+   "repo": "cyberhuntlab-v1-1-0--2-",
+   "familia": "cyberhuntlab-plataforma",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "next",
+   "backend": false,
+   "variaveis": [
+    "APP_ACCESS_TOKEN",
+    "GITHUB_TOKEN",
+    "GROQ_API_KEY",
+    "NINEROUTER_API_KEY",
+    "OPENAI_API_KEY",
+    "S3_ACCESS_KEY_ID",
+    "S3_SECRET_ACCESS_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: APP_ACCESS_TOKEN, GITHUB_TOKEN, GROQ_API_KEY, NINEROUTER_API_KEY, OPENAI_API_KEY, S3_ACCESS_KEY_ID",
+   "commit": "009f4d9"
+  },
+  {
+   "repo": "openui-codecode",
+   "familia": "cyberhuntlab-plataforma",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "next",
+   "backend": false,
+   "variaveis": [
+    "APP_ACCESS_TOKEN",
+    "GITHUB_TOKEN",
+    "GROQ_API_KEY",
+    "NINEROUTER_API_KEY",
+    "S3_ACCESS_KEY_ID",
+    "S3_SECRET_ACCESS_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: APP_ACCESS_TOKEN, GITHUB_TOKEN, GROQ_API_KEY, NINEROUTER_API_KEY, S3_ACCESS_KEY_ID, S3_SECRET_ACCESS_KEY",
+   "commit": "a3efe02"
+  },
+  {
+   "repo": "openui-code-code-cyberhuntlab-atualizado",
+   "familia": "cyberhuntlab-plataforma",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "next",
+   "backend": false,
+   "variaveis": [
+    "APP_ACCESS_TOKEN",
+    "GITHUB_TOKEN",
+    "GROQ_API_KEY",
+    "NINEROUTER_API_KEY",
+    "OPENAI_API_KEY",
+    "S3_ACCESS_KEY_ID",
+    "S3_SECRET_ACCESS_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: APP_ACCESS_TOKEN, GITHUB_TOKEN, GROQ_API_KEY, NINEROUTER_API_KEY, OPENAI_API_KEY, S3_ACCESS_KEY_ID",
+   "commit": "1e01844"
+  },
+  {
+   "repo": "opencode-chat",
+   "familia": "cyberhuntlab-plataforma",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "next",
+   "backend": false,
+   "variaveis": [
+    "APP_ACCESS_TOKEN"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: APP_ACCESS_TOKEN",
+   "commit": "cc3e2fb"
+  },
+  {
+   "repo": "opencode-workspace-vercel",
+   "familia": "cyberhuntlab-plataforma",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "next",
+   "backend": false,
+   "variaveis": [
+    "APP_ACCESS_TOKEN",
+    "GITHUB_TOKEN",
+    "S3_ACCESS_KEY_ID",
+    "S3_SECRET_ACCESS_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: APP_ACCESS_TOKEN, GITHUB_TOKEN, S3_ACCESS_KEY_ID, S3_SECRET_ACCESS_KEY",
+   "commit": "7fc6907"
+  },
+  {
+   "repo": "cyberhunterlab-correcao-vercel",
+   "familia": "cyberhuntlab-plataforma",
+   "categoria": "ia",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "43445b7"
+  },
+  {
+   "repo": "cyberhuntlab-gsoc-research--1-",
+   "familia": "research-center",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "next",
+   "backend": false,
+   "variaveis": [
+    "APP_ACCESS_TOKEN",
+    "GEMINI_API_KEY",
+    "GITHUB_TOKEN",
+    "GROQ_API_KEY",
+    "OPENAI_API_KEY",
+    "S3_ACCESS_KEY_ID",
+    "S3_SECRET_ACCESS_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: APP_ACCESS_TOKEN, GEMINI_API_KEY, GITHUB_TOKEN, GROQ_API_KEY, OPENAI_API_KEY, S3_ACCESS_KEY_ID",
+   "commit": "c86df7b"
+  },
+  {
+   "repo": "Deepseek-cyberhuntlab",
+   "familia": "agente-react",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY",
+   "commit": "def8e4f"
+  },
+  {
+   "repo": "cyber-hunt-lab",
+   "familia": "blog-prompts",
+   "categoria": "ia",
+   "status": "requer-build",
+   "rota": null,
+   "framework": "next",
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "deploy próprio na Vercel com base path /cyber-hunt-lab",
+   "commit": "4a54dfe"
+  },
+  {
+   "repo": "cyberhuntlab_vercel",
+   "familia": "site-institucional",
+   "categoria": "ia",
+   "status": "requer-build",
+   "rota": null,
+   "framework": "vite",
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "deploy próprio na Vercel com base path /cyberhuntlab_vercel",
+   "commit": "03459e1"
+  },
+  {
+   "repo": "cyberhuntrlab_vercel_independente",
+   "familia": "site-institucional",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": false,
+   "variaveis": [
+    "OPENAI_API_KEY",
+    "SESSION_SECRET"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: OPENAI_API_KEY, SESSION_SECRET",
+   "commit": "f9a25a1"
+  },
+  {
+   "repo": "prompts-orquestrados",
+   "familia": "prompts",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY",
+   "commit": "8e4672f"
+  },
+  {
+   "repo": "cyber-scaffolder",
+   "familia": "prompts",
+   "categoria": "ia",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY",
+    "GITHUB_CLIENT_SECRET"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY, GITHUB_CLIENT_SECRET",
+   "commit": "6bc23f0"
+  },
+  {
+   "repo": "Prompt.md",
+   "familia": "prompts",
+   "categoria": "ia",
+   "status": "estatico-ou-docs",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar publicação estática",
+   "commit": "12ef0d2"
+  },
+  {
+   "repo": "forgelab-studio",
+   "familia": "forgelab",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "node",
+   "backend": true,
+   "variaveis": [
+    "CUSTOM_AI_API_KEY",
+    "GEMINI_API_KEY",
+    "GROQ_API_KEY",
+    "NVIDIA_NIM_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: CUSTOM_AI_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, NVIDIA_NIM_API_KEY",
+   "commit": "b286880"
+  },
+  {
+   "repo": "Gitzip-to-dev",
+   "familia": "forgelab",
+   "categoria": "car",
+   "status": "terceiros",
+   "rota": null,
+   "framework": "node",
+   "backend": true,
+   "variaveis": [
+    "CUSTOM_AI_API_KEY",
+    "GEMINI_API_KEY",
+    "GROQ_API_KEY",
+    "NVIDIA_NIM_API_KEY"
+   ],
+   "proximo_passo": "manter como estudo; não publicar como aplicação própria",
+   "commit": "e8735fe"
+  },
+  {
+   "repo": "forgelab-cyberhuntlab",
+   "familia": "forgelab",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "node",
+   "backend": true,
+   "variaveis": [
+    "ADMIN_SESSION_SECRET",
+    "APP_ENCRYPTION_KEY",
+    "CUSTOM_AI_API_KEY",
+    "GEMINI_API_KEY",
+    "GITHUB_TOKEN",
+    "GROQ_API_KEY",
+    "JWT_SECRET",
+    "NVIDIA_API_KEY",
+    "NVIDIA_NIM_API_KEY",
+    "SUPABASE_SERVICE_ROLE_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: ADMIN_SESSION_SECRET, APP_ENCRYPTION_KEY, CUSTOM_AI_API_KEY, GEMINI_API_KEY, GITHUB_TOKEN, GROQ_API_KEY",
+   "commit": "dc0d279"
+  },
+  {
+   "repo": "Cyberhuntlab-Dev",
+   "familia": "forgelab",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "node",
+   "backend": true,
+   "variaveis": [
+    "ADMIN_SESSION_SECRET",
+    "APP_ENCRYPTION_KEY",
+    "CUSTOM_AI_API_KEY",
+    "GITHUB_TOKEN",
+    "GROQ_API_KEY",
+    "JWT_SECRET",
+    "NVIDIA_API_KEY",
+    "NVIDIA_NIM_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: ADMIN_SESSION_SECRET, APP_ENCRYPTION_KEY, CUSTOM_AI_API_KEY, GITHUB_TOKEN, GROQ_API_KEY, JWT_SECRET",
+   "commit": "e60bce4"
+  },
+  {
+   "repo": "Ziptodevgit",
+   "familia": "forgelab",
+   "categoria": "car",
+   "status": "requer-backend",
+   "rota": null,
+   "framework": "node",
+   "backend": true,
+   "variaveis": [],
+   "proximo_passo": "avaliar funções serverless ou VPS",
+   "commit": "566a8f8"
+  },
+  {
+   "repo": "forgelab-cyberhunt",
+   "familia": "forgelab",
+   "categoria": "car",
+   "status": "sem-codigo",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "publicar o código no repositório",
+   "commit": "b5d93c2"
+  },
+  {
+   "repo": "github-intelligence-career-ai",
+   "familia": "github-intelligence",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "CUSTOM_AI_API_KEY",
+    "GEMINI_API_KEY",
+    "GROQ_API_KEY",
+    "NVIDIA_NIM_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: CUSTOM_AI_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, NVIDIA_NIM_API_KEY",
+   "commit": "525557f"
+  },
+  {
+   "repo": "github-intelligence-career-suite-ai",
+   "familia": "github-intelligence",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY",
+   "commit": "eea20fc"
+  },
+  {
+   "repo": "Github-automatic",
+   "familia": "github-intelligence",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY",
+   "commit": "41a21c5"
+  },
+  {
+   "repo": "Cyberhunterlab",
+   "familia": "github-intelligence",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY",
+   "commit": "4320920"
+  },
+  {
+   "repo": "ziptogithub",
+   "familia": "ziptogit",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "DEEPSEEK_API_KEY",
+    "GEMINI_API_KEY",
+    "GROQ_API_KEY",
+    "NVIDIA_API_KEY",
+    "OPENAI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: DEEPSEEK_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, NVIDIA_API_KEY, OPENAI_API_KEY",
+   "commit": "25cc46d"
+  },
+  {
+   "repo": "Loja-Da-Shopee",
+   "familia": "ziptogit",
+   "categoria": "car",
+   "status": "requer-build",
+   "rota": null,
+   "framework": "vite",
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "deploy próprio na Vercel com base path /Loja-Da-Shopee",
+   "commit": "825d219"
+  },
+  {
+   "repo": "cyberhunterlab-funil-curriculo-github",
+   "familia": "funil-ats",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GITHUB_TOKEN"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GITHUB_TOKEN",
+   "commit": "0c53ec7"
+  },
+  {
+   "repo": "cyberhunterlab-completo-vercel--1-",
+   "familia": "funil-ats",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GITHUB_TOKEN"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GITHUB_TOKEN",
+   "commit": "49afc76"
+  },
+  {
+   "repo": "ats-web",
+   "familia": "ats",
+   "categoria": "car",
+   "status": "requer-backend",
+   "rota": null,
+   "framework": null,
+   "backend": true,
+   "variaveis": [],
+   "proximo_passo": "avaliar funções serverless ou VPS",
+   "commit": "1e8701f"
+  },
+  {
+   "repo": "cv-intelligence-ai-zip--1-",
+   "familia": "ats",
+   "categoria": "car",
+   "status": "estatico-ou-docs",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar publicação estática",
+   "commit": "cb8f447"
+  },
+  {
+   "repo": "Gerador-Ideias-Hackathons-",
+   "familia": "hackmind",
+   "categoria": "car",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "CUSTOM_AI_API_KEY",
+    "GROQ_API_KEY",
+    "NVIDIA_NIM_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: CUSTOM_AI_API_KEY, GROQ_API_KEY, NVIDIA_NIM_API_KEY",
+   "commit": "7e4b329"
+  },
+  {
+   "repo": "hackmind-geosentinel",
+   "familia": "geosentinel",
+   "categoria": "car",
+   "status": "requer-build",
+   "rota": null,
+   "framework": "vite",
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "deploy próprio na Vercel com base path /hackmind-geosentinel",
+   "commit": "a7eeff5"
+  },
+  {
+   "repo": "cortador-916",
+   "familia": "cortador-916",
+   "categoria": "vid",
+   "status": "integrado-externo",
+   "rota": "/cortador-916/ (proxy para cortador-916.vercel.app)",
+   "framework": "node",
+   "backend": true,
+   "variaveis": [],
+   "proximo_passo": "validar proxy/redirect após o deploy",
+   "commit": "cb129d9"
+  },
+  {
+   "repo": "Tts-Audio",
+   "familia": "audio-tts",
+   "categoria": "vid",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": false,
+   "variaveis": [
+    "GEMINI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY",
+   "commit": "f22343a"
+  },
+  {
+   "repo": "AI-Voice-Generation-Professional-Text-to-Speech",
+   "familia": "audio-tts",
+   "categoria": "vid",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY",
+    "SECRET_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY, SECRET_KEY",
+   "commit": "30b8988"
+  },
+  {
+   "repo": "Shorts-Achadinhos-Shopee",
+   "familia": "shorts-achadinhos",
+   "categoria": "vid",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": null,
+   "backend": true,
+   "variaveis": [
+    "APP_SECRET"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: APP_SECRET",
+   "commit": "57336f4"
+  },
+  {
+   "repo": "Money-imprime-turbo",
+   "familia": "shorts-achadinhos",
+   "categoria": "vid",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": null,
+   "backend": true,
+   "variaveis": [
+    "APP_SECRET"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: APP_SECRET",
+   "commit": "652f4c4"
+  },
+  {
+   "repo": "minimax-h3-termux-python",
+   "familia": "minimax",
+   "categoria": "vid",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "d3dd596"
+  },
+  {
+   "repo": "gerador-ebook-pdf",
+   "familia": "ebook",
+   "categoria": "vid",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY",
+   "commit": "98d906c"
+  },
+  {
+   "repo": "achadinhos-atualizado",
+   "familia": "achadinhos",
+   "categoria": "com",
+   "status": "integrado-externo",
+   "rota": "/achadinhos → https://osachadinhosdashopee.com.br",
+   "framework": "node",
+   "backend": true,
+   "variaveis": [
+    "TURSO_AUTH_TOKEN"
+   ],
+   "proximo_passo": "validar proxy/redirect após o deploy",
+   "commit": "b1a0f71"
+  },
+  {
+   "repo": "Projeto",
+   "familia": "achadinhos",
+   "categoria": "com",
+   "status": "estatico-ou-docs",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar publicação estática",
+   "commit": "7e2d8af"
+  },
+  {
+   "repo": "loja-da-shopee-deploy",
+   "familia": "achadinhos",
+   "categoria": "com",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "TURSO_AUTH_TOKEN"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: TURSO_AUTH_TOKEN",
+   "commit": "89d9029"
+  },
+  {
+   "repo": "files",
+   "familia": "achadinhos",
+   "categoria": "com",
+   "status": "estatico-ou-docs",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar publicação estática",
+   "commit": "5093604"
+  },
+  {
+   "repo": "agentes-shopee",
+   "familia": "achadinhos",
+   "categoria": "com",
+   "status": "requer-backend",
+   "rota": null,
+   "framework": null,
+   "backend": true,
+   "variaveis": [],
+   "proximo_passo": "avaliar funções serverless ou VPS",
+   "commit": "5f0e90f"
+  },
+  {
+   "repo": "Blogg-template-achadinhos-da-shopee",
+   "familia": "achadinhos",
+   "categoria": "com",
+   "status": "requer-chaves",
+   "rota": null,
+   "framework": "vite",
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY"
+   ],
+   "proximo_passo": "definir modo demo e configurar variáveis na Vercel: GEMINI_API_KEY",
+   "commit": "e0170b8"
+  },
+  {
+   "repo": "diana-shopee",
+   "familia": "achadinhos",
+   "categoria": "com",
+   "status": "sem-codigo",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "publicar o código no repositório",
+   "commit": "616a03a"
+  },
+  {
+   "repo": "lucrar_afiliados_termux",
+   "familia": "lucrar",
+   "categoria": "com",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "d5dbc67"
+  },
+  {
+   "repo": "lucrar_afiliados_vercel",
+   "familia": "lucrar",
+   "categoria": "com",
+   "status": "cli-python",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "2733db2"
+  },
+  {
+   "repo": "arquivo.md",
+   "familia": "basecamp",
+   "categoria": "com",
+   "status": "cli-python",
+   "rota": null,
+   "framework": "node",
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "avaliar execução no navegador (Pyodide) se usar só biblioteca padrão",
+   "commit": "bb82d3a"
+  },
+  {
+   "repo": "GeradorShorts-Youtube",
+   "familia": "oss",
+   "categoria": "oss",
+   "status": "terceiros",
+   "rota": null,
+   "framework": "node",
+   "backend": true,
+   "variaveis": [
+    "AWS_ACCESS_KEY_ID",
+    "AWS_SECRET_ACCESS_KEY",
+    "RAPIDAPI_KEY"
+   ],
+   "proximo_passo": "manter como estudo; não publicar como aplicação própria",
+   "commit": "3656c18"
+  },
+  {
+   "repo": "video",
+   "familia": "oss",
+   "categoria": "oss",
+   "status": "terceiros",
+   "rota": null,
+   "framework": null,
+   "backend": true,
+   "variaveis": [],
+   "proximo_passo": "manter como estudo; não publicar como aplicação própria",
+   "commit": "6c2ab49"
+  },
+  {
+   "repo": "Opusclips-clone",
+   "familia": "oss",
+   "categoria": "oss",
+   "status": "terceiros",
+   "rota": null,
+   "framework": "next",
+   "backend": true,
+   "variaveis": [
+    "ANTHROPIC_API_KEY",
+    "APIFY_API_TOKEN",
+    "APIFY_STORAGE_KEY_TEMPLATE",
+    "APIFY_STORAGE_READER_ACCESS_KEY_ID",
+    "APIFY_STORAGE_READER_SECRET_ACCESS_KEY",
+    "APIFY_STORAGE_WRITER_ACCESS_KEY_ID",
+    "APIFY_STORAGE_WRITER_SECRET_ACCESS_KEY",
+    "APP_SETTINGS_ENCRYPTION_KEY",
+    "ASSEMBLY_AI_API_KEY",
+    "AWS_ACCESS_KEY_ID",
+    "AWS_SECRET_ACCESS_KEY",
+    "AXIOM_TOKEN",
+    "BACKEND_AUTH_SECRET",
+    "BETTER_AUTH_SECRET",
+    "GOOGLE_API_KEY",
+    "INSTAGRAM_APP_SECRET",
+    "MEDIA_FALLBACK_ACCESS_KEY_ID",
+    "MEDIA_FALLBACK_SECRET_ACCESS_KEY",
+    "MEDIA_S3_ACCESS_KEY_ID",
+    "MEDIA_S3_SECRET_ACCESS_KEY",
+    "MEDIA_S3_SESSION_TOKEN",
+    "NEXT_PUBLIC_POSTHOG_KEY",
+    "OLLAMA_API_KEY",
+    "OPENAI_API_KEY",
+    "OPENROUTER_API_KEY",
+    "PEXELS_API_KEY",
+    "POSTHOG_PERSONAL_API_KEY",
+    "POSTHOG_PROJECT_TOKEN",
+    "RAPIDAPI_YOUTUBE_API_KEY",
+    "STRIPE_SECRET_KEY",
+    "STRIPE_WEBHOOK_SECRET",
+    "TIKTOK_CLIENT_KEY",
+    "TIKTOK_CLIENT_SECRET",
+    "YOUTUBE_DATA_API_KEY",
+    "YOUTUBE_OAUTH_CLIENT_SECRET"
+   ],
+   "proximo_passo": "manter como estudo; não publicar como aplicação própria",
+   "commit": "6765ea8"
+  },
+  {
+   "repo": "Gerador-Short-Youtube",
+   "familia": "oss",
+   "categoria": "oss",
+   "status": "terceiros",
+   "rota": null,
+   "framework": null,
+   "backend": true,
+   "variaveis": [
+    "GEMINI_API_KEY",
+    "MUAPI_API_KEY",
+    "OPENAI_API_KEY"
+   ],
+   "proximo_passo": "manter como estudo; não publicar como aplicação própria",
+   "commit": "692c57d"
+  },
+  {
+   "repo": "Gerador-Shorts-Virais",
+   "familia": "oss",
+   "categoria": "oss",
+   "status": "terceiros",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [
+    "GEMINI_API_KEY",
+    "MUAPI_API_KEY",
+    "OPENAI_API_KEY"
+   ],
+   "proximo_passo": "manter como estudo; não publicar como aplicação própria",
+   "commit": "8aec910"
+  },
+  {
+   "repo": "skills-main",
+   "familia": "oss",
+   "categoria": "oss",
+   "status": "terceiros",
+   "rota": null,
+   "framework": "node",
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "manter como estudo; não publicar como aplicação própria",
+   "commit": "9e7a248"
+  },
+  {
+   "repo": "Blog-Automatico-Seo",
+   "familia": "oss",
+   "categoria": "oss",
+   "status": "terceiros",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "manter como estudo; não publicar como aplicação própria",
+   "commit": "a23fe4b"
+  },
+  {
+   "repo": "ticarollamas-arch",
+   "familia": "reservados",
+   "categoria": "res",
+   "status": "sem-codigo",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "publicar o código no repositório",
+   "commit": "3c50724"
+  },
+  {
+   "repo": "youcinemobile",
+   "familia": "reservados",
+   "categoria": "res",
+   "status": "sem-codigo",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "publicar o código no repositório",
+   "commit": "a6ae8bd"
+  },
+  {
+   "repo": "VideoMoneyTurbo",
+   "familia": "reservados",
+   "categoria": "res",
+   "status": "sem-codigo",
+   "rota": null,
+   "framework": null,
+   "backend": false,
+   "variaveis": [],
+   "proximo_passo": "publicar o código no repositório",
+   "commit": "a0a4c92"
+  }
+ ]
+}

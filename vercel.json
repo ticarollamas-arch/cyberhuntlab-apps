@@ -1,0 +1,52 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/achadinhos",
+      "destination": "https://osachadinhosdashopee.com.br",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/cortador-916/:path*",
+      "destination": "https://cortador-916.vercel.app/:path*"
+    },
+    {
+      "source": "/api/transcrever",
+      "destination": "https://cortador-916.vercel.app/api/transcrever"
+    },
+    {
+      "source": "/sobre/:slug*",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/((?!cortador-916).*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ]
+}

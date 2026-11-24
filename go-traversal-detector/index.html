@@ -1,0 +1,59 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>go-traversal-detector</title><link rel="stylesheet" href="/_runtime/app.css"><meta name="theme-color" content="#060b16"></head><body>
+<script>
+window.APP={
+ repo:"go-traversal-detector", family:"go-traversal-detector", title:"go-traversal-detector",
+ lead:"Análise estática de path traversal (CWE-22) em código Go. Procura filepath.Join, os.Open e afins e verifica se a mesma função tem barreira de contenção (HasPrefix, filepath.Rel, os.Root…).",
+ entry:"gotraversal.py", files:["gotraversal.py"], extractZip:true, selftest:["--test"],
+ accept:".go,.zip", acceptLabel:"arquivos .go ou um ZIP do projeto",
+ args:(dir)=>[dir],
+ tech:"Python 3 (biblioteca padrão) · Pyodide/WebAssembly", license:"MIT",
+ refs:'<a href="https://cwe.mitre.org/data/definitions/22.html" target="_blank" rel="noopener">CWE-22</a> · <a href="https://pkg.go.dev/os#Root" target="_blank" rel="noopener">os.Root</a>',
+ note:"O resultado aponta CANDIDATOS para revisão humana, não vulnerabilidades comprovadas. O código enviado é analisado só na memória do seu navegador.",
+ samples:[
+  {label:"handler vulnerável",name:"download.go",code:`package main
+
+import (
+	"net/http"
+	"os"
+	"path/filepath"
+)
+
+// Serve arquivos do diretório /srv/arquivos.
+func download(w http.ResponseWriter, r *http.Request) {
+	nome := r.URL.Query().Get("arquivo")
+	caminho := filepath.Join("/srv/arquivos", nome) // ../../etc/passwd sai da raiz
+	dados, err := os.ReadFile(caminho)
+	if err != nil {
+		http.Error(w, "não encontrado", 404)
+		return
+	}
+	w.Write(dados)
+}
+`},
+  {label:"handler protegido",name:"download_seguro.go",code:`package main
+
+import (
+	"net/http"
+	"os"
+	"path/filepath"
+	"strings"
+)
+
+const base = "/srv/arquivos"
+
+func downloadSeguro(w http.ResponseWriter, r *http.Request) {
+	nome := r.URL.Query().Get("arquivo")
+	caminho := filepath.Clean(filepath.Join(base, nome))
+	if !strings.HasPrefix(caminho, base+string(os.PathSeparator)) {
+		http.Error(w, "caminho inválido", 400)
+		return
+	}
+	dados, err := os.ReadFile(caminho)
+	if err != nil {
+		http.Error(w, "não encontrado", 404)
+		return
+	}
+	w.Write(dados)
+}
+`}]};
+</script><script src="/_runtime/runner.js" defer></script></body></html>

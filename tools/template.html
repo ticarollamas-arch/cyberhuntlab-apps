@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bancada de projetos · CyberHuntLab · Ana Caroline Lamas</title>
+<meta name="description" content="Bancada com todos os projetos públicos de Ana Caroline Lamas (CyberHuntLab): segurança, engenharia reversa, agentes de IA, vídeo e automação.">
+<meta name="theme-color" content="#060b16">
+<style>
+:root{--bg:#060b16;--card:#0f1a2e;--line:#1f3150;--txt:#e6edf7;--mut:#93a6c0;--cy:#3ee0ff;--vi:#8b5cf6;--gr:#22e39b;--pk:#ff4fa3;--yl:#febc2e;
+--mono:ui-monospace,SFMono-Regular,"JetBrains Mono",Menlo,Consolas,monospace;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.6 var(--sans);overflow-x:hidden}
+a{color:var(--cy)}::selection{background:var(--cy);color:#001018}
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+.spot{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(600px circle at var(--mx,50%) var(--my,20%),rgba(62,224,255,.07),transparent 60%)}
+.wrap{position:relative;z-index:2;max-width:1200px;margin:auto;padding:0 24px}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:linear-gradient(90deg,var(--cy),var(--vi),var(--pk))}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(6,11,22,.7);border-bottom:1px solid rgba(31,49,80,.6)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:62px}
+.brand{font-family:var(--mono);font-weight:700;color:var(--txt);text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand i{width:10px;height:10px;border-radius:50%;background:var(--gr);box-shadow:0 0 12px var(--gr);animation:pulse 2s infinite}
+nav .r{margin-left:auto;display:flex;gap:10px;flex:none}
+nav .btn,.acts .btn.sm{white-space:nowrap;flex:none}
+.brand{min-width:0;white-space:nowrap}.brand .full{overflow:hidden;text-overflow:ellipsis}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:7px;padding:10px 16px;border-radius:11px;border:1px solid var(--line);background:rgba(15,26,46,.75);color:var(--txt);text-decoration:none;font:600 14px var(--sans);transition:transform .2s,border-color .2s,box-shadow .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px);border-color:var(--cy);box-shadow:0 8px 28px -10px rgba(62,224,255,.5)}
+.btn::before{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(110deg,transparent,rgba(255,255,255,.18),transparent);transition:left .6s}
+.btn:hover::before{left:130%}
+.btn.pri{background:linear-gradient(135deg,var(--cy),var(--vi));color:#031018;border:0}
+.btn.sm{padding:7px 12px;font-size:13px;border-radius:9px}
+@media(max-width:640px){nav .r .hide{display:none}}
+@media(max-width:420px){.brand .at{display:none}nav .wrap{padding:0 16px}}
+
+/* HOME */
+.hero{padding:70px 0 30px;text-align:center}
+.tag{font:700 13px var(--mono);color:var(--cy);letter-spacing:3px}
+h1{font-size:clamp(38px,6.5vw,76px);line-height:1.04;margin:14px 0 14px;letter-spacing:-2px}
+.grad{background:linear-gradient(100deg,var(--cy),var(--vi) 45%,var(--pk) 70%,var(--cy));background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+.lead{color:var(--mut);max-width:700px;margin:0 auto}
+.stats{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:34px 0 10px}
+.stat{min-width:150px;border:1px solid var(--line);border-radius:14px;padding:14px 18px;background:rgba(15,26,46,.6)}
+.stat b{display:block;font:700 32px var(--mono);color:var(--cy)}
+.stat span{color:var(--mut);font-size:13px}
+.bar{position:sticky;top:62px;z-index:40;padding:14px 0;background:linear-gradient(var(--bg) 70%,transparent)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.chip{font:13px var(--mono);padding:8px 13px;border-radius:99px;border:1px solid var(--line);background:rgba(15,26,46,.85);color:#cfe3ff;cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--cy)}
+.chip.on{background:linear-gradient(135deg,var(--cy),var(--vi));color:#031018;border-color:transparent;font-weight:700}
+.chip small{opacity:.7;margin-left:4px}
+.search{display:flex;justify-content:center;margin-top:12px}
+.search input{width:min(560px,100%);font:inherit;background:rgba(15,26,46,.92);color:var(--txt);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.search input:focus{outline:2px solid rgba(62,224,255,.5);border-color:var(--cy)}
+.cat-h{display:flex;align-items:center;gap:12px;margin:46px 0 18px}
+.cat-h h2{margin:0;font-size:clamp(22px,3vw,30px)}
+.cat-h .ln{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.cat-h .n{font:13px var(--mono);color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:18px}
+.card{position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(15,26,46,.94),rgba(11,19,36,.94));border:1px solid var(--line);border-radius:18px;padding:22px;transition:transform .25s,border-color .25s;overflow:hidden;transform-style:preserve-3d}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(380px circle at var(--cx,50%) var(--cy,50%),rgba(62,224,255,.13),transparent 45%);opacity:0;transition:opacity .3s}
+.card:hover{border-color:rgba(62,224,255,.55)}.card:hover::after{opacity:1}
+.card .top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.card .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(62,224,255,.1);border:1px solid rgba(62,224,255,.3);font-size:20px;flex:none}
+.badge{font:11px var(--mono);padding:3px 9px;border-radius:99px;border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+.badge.live{color:var(--gr);border-color:rgba(34,227,155,.45);background:rgba(34,227,155,.08)}
+.badge.live::before{content:"● ";animation:pulse 1.4s infinite}
+.badge.ver{color:#d9cbff;border-color:rgba(139,92,246,.4)}
+.badge.oss{color:var(--yl);border-color:rgba(254,188,46,.4)}
+.card h3{margin:0 0 6px;font-size:19px;line-height:1.25}
+.card p{color:var(--mut);margin:0 0 14px;font-size:15px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tags span{font:12px var(--mono);padding:3px 9px;border-radius:7px;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.28);color:#d9cbff}
+.lbar{display:flex;height:6px;border-radius:99px;overflow:hidden;background:#13213a;margin-bottom:14px}
+.lbar i{display:block;height:100%;width:0;transition:width 1s cubic-bezier(.2,.7,.2,1)}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+
+/* DETAIL */
+.back{display:inline-flex;margin:28px 0 0;color:var(--mut);text-decoration:none;font:14px var(--mono)}
+.back:hover{color:var(--cy)}
+.dh{padding:26px 0 10px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+@media(max-width:900px){.dh{grid-template-columns:1fr}}
+.dh h1{text-align:left;font-size:clamp(34px,5.5vw,62px)}
+.dh .lead{margin:0}
+.term{background:rgba(8,14,27,.94);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(62,224,255,.35)}
+.term .tb{display:flex;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);align-items:center}
+.term .tb b{width:11px;height:11px;border-radius:50%;background:#ff5f57}.term .tb b:nth-child(2){background:#febc2e}.term .tb b:nth-child(3){background:#28c840}
+.term .tb span{margin-left:auto;font:12px var(--mono);color:var(--mut)}
+.term pre{margin:0;padding:16px;font:13px/1.7 var(--mono);min-height:210px;white-space:pre-wrap;color:#cfe3ff}
+.term .p{color:var(--gr)}.term .c{color:var(--cy)}.term .m{color:var(--mut)}
+.cursor{display:inline-block;width:8px;height:15px;background:var(--cy);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+.panel{background:rgba(15,26,46,.7);border:1px solid var(--line);border-radius:18px;padding:24px;margin-top:22px}
+.panel h2{margin:0 0 14px;font-size:20px}
+.comp{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.comp div{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:rgba(6,11,22,.55);border:1px solid var(--line)}
+.comp div::before{content:"✓";color:var(--gr);font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font:13px var(--mono);color:var(--mut)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.repo{border-top:1px solid var(--line);padding:18px 0;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start}
+.repo:first-of-type{border-top:0}
+@media(max-width:760px){.repo{grid-template-columns:1fr}}
+.repo h3{margin:0 0 4px;font-size:17px}
+.repo .rn{font:13px var(--mono);color:var(--cy)}
+.repo p{margin:6px 0 8px;color:var(--mut);font-size:15px}
+.repo .meta{font:12px var(--mono);color:var(--mut);display:flex;gap:14px;flex-wrap:wrap}
+.copy{cursor:pointer}
+.note{font-size:14px;color:var(--mut);border-left:3px solid var(--yl);padding:8px 14px;background:rgba(254,188,46,.06);border-radius:0 10px 10px 0;margin-top:14px}
+.empty{text-align:center;color:var(--mut);padding:40px}
+footer{position:relative;z-index:2;border-top:1px solid var(--line);margin-top:80px;padding:26px 0;color:var(--mut);font:13px var(--mono)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}
+#app.fade{animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes shine{to{background-position:250% center}}
+@keyframes blink{50%{opacity:0}}
+@keyframes pulse{50%{opacity:.4}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div><canvas id="bg" aria-hidden="true"></canvas><div class="spot" aria-hidden="true"></div>
+<nav><div class="wrap">
+  <a class="brand" href="/" data-link><i></i><span class="full">bancada<span class="at"><span style="color:var(--mut)">@</span>cyberhuntlab</span></span></a>
+  <div class="r">
+    <a class="btn sm hide" href="https://carol.cyberhuntlab.com.br" id="portfolioLink">Portfólio</a>
+    <a class="btn sm pri" href="https://github.com/ticarollamas-arch">GitHub ↗</a>
+  </div>
+</div></nav>
+<main class="wrap" id="app"></main>
+<footer><div class="wrap"><span>© <span id="yr"></span> Ana Caroline Lamas · CyberHuntLab</span><span>dados extraídos dos repositórios públicos · <span id="gen"></span></span></div></footer>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(()=>{
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const D=JSON.parse(document.getElementById('data').textContent);
+const USER='ticarollamas-arch';
+const $=s=>document.querySelector(s);
+const app=$('#app');
+$('#yr').textContent=new Date().getFullYear();$('#gen').textContent=D.generated;
+const COLORS={Python:'#3572A5',JavaScript:'#f1e05a',TypeScript:'#3178c6',HTML:'#e34c26',CSS:'#663399',Go:'#00ADD8',Shell:'#89e051',PHP:'#4F5D95',Rust:'#dea584',SQL:'#e38c00',YAML:'#cb171e',Java:'#b07219',Kotlin:'#A97BFF'};
+const ORDER=Object.keys(D.cats);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const totalRepos=D.fams.reduce((a,f)=>a+f.repos.length,0);
+const allLangs=new Set();D.fams.forEach(f=>Object.keys(f.langs).forEach(l=>allLangs.add(l)));
+
+/* ---------- roteador: /slug no Vercel, #/slug ao abrir o arquivo localmente ---------- */
+const HASH=location.protocol==='file:';
+function path(){return HASH?(location.hash.slice(1)||'/'):location.pathname;}
+function go(p){if(HASH)location.hash=p;else{history.pushState({},'',p);route();}}
+document.addEventListener('click',e=>{const a=e.target.closest('a[data-link]');if(!a||e.metaKey||e.ctrlKey)return;e.preventDefault();go(a.getAttribute('href'));});
+addEventListener('popstate',route);addEventListener('hashchange',route);
+function href(p){return HASH?'#'+p:p;}
+
+/* ---------- fundo de partículas ---------- */
+const cv=$('#bg'),cx=cv.getContext('2d');let W,H,pts=[],mouse={x:-999,y:-999};const dpr=devicePixelRatio||1;
+function size(){W=cv.width=innerWidth*dpr;H=cv.height=innerHeight*dpr;cv.style.width=innerWidth+'px';cv.style.height=innerHeight+'px';const n=Math.min(100,Math.floor(innerWidth*innerHeight/15000));pts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35*dpr,vy:(Math.random()-.5)*.35*dpr}));}
+size();addEventListener('resize',size);
+addEventListener('pointermove',e=>{mouse.x=e.clientX*dpr;mouse.y=e.clientY*dpr;document.documentElement.style.setProperty('--mx',e.clientX+'px');document.documentElement.style.setProperty('--my',e.clientY+'px');});
+(function draw(){cx.clearRect(0,0,W,H);const L=125*dpr;
+ for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;const dm=Math.hypot(p.x-mouse.x,p.y-mouse.y);if(dm<150*dpr&&dm>0){p.x+=(p.x-mouse.x)/dm*.8;p.y+=(p.y-mouse.y)/dm*.8;}cx.fillStyle='rgba(62,224,255,.5)';cx.beginPath();cx.arc(p.x,p.y,1.3*dpr,0,7);cx.fill();}
+ for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<L){cx.strokeStyle=`rgba(${i%3?'62,224,255':'139,92,246'},${(1-d/L)*.2})`;cx.lineWidth=dpr;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke();}}
+ if(!RM)requestAnimationFrame(draw);})();
+addEventListener('scroll',()=>{const h=document.documentElement;$('#progress').style.width=(h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+
+/* ---------- animações utilitárias ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');e.target.querySelectorAll('.lbar i').forEach(i=>i.style.width=i.dataset.w);io.unobserve(e.target);}}),{threshold:.08});
+function watch(){app.querySelectorAll('.rv:not(.on)').forEach((el,i)=>{el.style.transitionDelay=(RM?0:(i%6)*60)+'ms';io.observe(el);});}
+function tilt(el,max=6){if(RM)return;el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;el.style.transform=`perspective(900px) rotateX(${(.5-y)*max}deg) rotateY(${(x-.5)*max}deg)`;el.style.setProperty('--cx',x*100+'%');el.style.setProperty('--cy',y*100+'%');});el.addEventListener('pointerleave',()=>el.style.transform='');}
+function count(el,to){if(RM){el.textContent=to;return;}let n=0;const st=Math.max(1,Math.ceil(to/35));const t=setInterval(()=>{n=Math.min(to,n+st);el.textContent=n;if(n>=to)clearInterval(t);},28);}
+function langBar(langs){const tot=Object.values(langs).reduce((a,b)=>a+b,0);if(!tot)return'';const ent=Object.entries(langs).sort((a,b)=>b[1]-a[1]);
+ return `<div class="lbar" title="${esc(ent.map(([l,v])=>l+' '+Math.round(v/tot*100)+'%').join(' · '))}">${ent.map(([l,v])=>`<i style="background:${COLORS[l]||'#8b949e'}" data-w="${(v/tot*100).toFixed(1)}%"></i>`).join('')}</div>`;}
+function badges(f){let b='';if(f.app)b+=`<span class="badge live">${f.app[1]}</span>`;if(f.repos.length>1)b+=`<span class="badge ver">${f.repos.length} repositórios</span>`;if(f.cat==='oss')b+='<span class="badge oss">terceiros</span>';return b;}
+function ago(d){const dd=Math.round((Date.now()-new Date(d))/864e5);return dd<1?'hoje':dd<30?`há ${dd} d`:dd<365?`há ${Math.round(dd/30)} meses`:`há ${Math.round(dd/365)} anos`;}
+function status(r){if(r.reserved)return'<span class="badge">reservado / em construção</span>';if(r.upstream)return`<span class="badge oss">baseado em ${esc(r.upstream[0])}</span>`;return'';}
+
+/* ---------- HOME ---------- */
+let filter='all',term='';
+function home(){
+ document.title='Bancada de projetos · CyberHuntLab · Ana Caroline Lamas';
+ const counts={};D.fams.forEach(f=>counts[f.cat]=(counts[f.cat]||0)+1);
+ app.innerHTML=`
+ <section class="hero">
+  <div class="tag rv">BANCADA DE PROJETOS · CYBERHUNTLAB</div>
+  <h1 class="rv">Tudo que eu já<br><span class="grad">construí</span>, num lugar só</h1>
+  <p class="lead rv">Todos os meus repositórios públicos, organizados por área. Os marcados como <b>funcionando</b> abrem a aplicação real em <b>▶ Visitar projeto</b>; os demais mostram o que cada projeto faz, as competências que ele demonstra e abrir o código.</p>
+  <div class="stats rv"><div class="stat"><b id="s1">0</b><span>repositórios públicos</span></div><div class="stat"><b id="s2">0</b><span>projetos (famílias)</span></div><div class="stat"><b id="s3">0</b><span>linguagens</span></div><div class="stat"><b id="s4">0</b><span>áreas</span></div></div>
+ </section>
+ <div class="bar"><div class="chips" id="chips"><button class="chip" data-c="all">Todos<small>${D.fams.length}</small></button>${ORDER.map(c=>`<button class="chip" data-c="${c}">${D.cats[c][1]} ${esc(D.cats[c][0])}<small>${counts[c]||0}</small></button>`).join('')}</div>
+ <div class="search"><input id="q" placeholder="Buscar por nome, tecnologia ou competência…  (ex.: CWE, Flask, APK)" aria-label="Buscar projetos" value="${esc(term)}"></div></div>
+ <div id="list"></div>`;
+ count($('#s1'),totalRepos);count($('#s2'),D.fams.length);count($('#s3'),allLangs.size);count($('#s4'),ORDER.length);
+ const paint=()=>{document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c.dataset.c===filter));list();};
+ $('#chips').onclick=e=>{const c=e.target.closest('.chip');if(!c)return;filter=c.dataset.c;paint();};
+ $('#q').oninput=e=>{term=e.target.value;list();};
+ paint();
+}
+function match(f){if(filter!=='all'&&f.cat!==filter)return false;if(!term)return true;const t=term.toLowerCase();
+ return [f.title,f.short,...f.comp,...f.stack,...Object.keys(f.langs),...f.repos.flatMap(r=>[r.repo,r.title,r.summary])].join(' ').toLowerCase().includes(t);}
+function list(){const box=$('#list');let html='';
+ for(const c of ORDER){const fs=D.fams.filter(f=>f.cat===c&&match(f));if(!fs.length)continue;
+  html+=`<div class="cat-h rv"><h2>${D.cats[c][1]} ${esc(D.cats[c][0])}</h2><span class="ln"></span><span class="n">${fs.length} projeto${fs.length>1?'s':''}</span></div><div class="grid">`;
+  for(const f of fs){const main=f.repos[0];html+=`<article class="card rv">
+   <div class="top"><div class="ic">${D.cats[f.cat][1]}</div><div style="display:flex;gap:6px;flex-wrap:wrap">${badges(f)}</div></div>
+   <h3>${esc(f.title)}</h3><p>${esc(f.short)}</p>
+   <div class="tags">${f.comp.slice(0,4).map(t=>`<span>${esc(t)}</span>`).join('')}</div>
+   ${langBar(f.langs)}
+   <div class="acts">${f.app?`<a class="btn sm pri" href="${esc(f.app[0])}"${f.app[0].startsWith('http')?' target="_blank" rel="noopener"':''}>▶ Visitar projeto</a><a class="btn sm" href="${href('/sobre/'+f.slug)}" data-link>Detalhes</a>`:`<a class="btn sm pri" href="${href('/sobre/'+f.slug)}" data-link>Visualizar →</a>`}<a class="btn sm" href="https://github.com/${USER}/${encodeURIComponent(main.repo)}" target="_blank" rel="noopener">GitHub ↗</a></div>
+  </article>`;}
+  html+='</div>';}
+ box.innerHTML=html||'<p class="empty">Nenhum projeto encontrado para essa busca.</p>';
+ box.querySelectorAll('.card').forEach(c=>tilt(c,5));watch();}
+
+/* ---------- DETALHE ---------- */
+function detail(f){
+ document.title=f.title+' · Bancada CyberHuntLab';
+ const main=f.repos[0];const tot=Object.values(f.langs).reduce((a,b)=>a+b,0);
+ const ent=Object.entries(f.langs).sort((a,b)=>b[1]-a[1]);
+ const i=D.fams.indexOf(f),prev=D.fams[(i-1+D.fams.length)%D.fams.length],next=D.fams[(i+1)%D.fams.length];
+ app.innerHTML=`
+ <a class="back" href="${href('/')}" data-link>← voltar para a bancada</a>
+ <section class="dh">
+  <div><div class="tag rv">${D.cats[f.cat][1]} ${esc(D.cats[f.cat][0]).toUpperCase()}</div>
+   <h1 class="rv"><span class="grad">${esc(f.title)}</span></h1>
+   <p class="lead rv">${esc(f.short)}</p>
+   <div class="acts rv" style="margin-top:20px">
+    ${f.app?`<a class="btn pri" href="${esc(f.app[0])}"${f.app[0].startsWith('http')?' target="_blank" rel="noopener"':''}>▶ Visitar projeto</a>`:''}
+    <a class="btn ${f.app?'':'pri'}" href="https://github.com/${USER}/${encodeURIComponent(main.repo)}" target="_blank" rel="noopener">Ver código ↗</a>
+    <a class="btn" href="https://github.dev/${USER}/${encodeURIComponent(main.repo)}" target="_blank" rel="noopener">◧ VS Code web</a>
+    <a class="btn" href="https://codespaces.new/${USER}/${encodeURIComponent(main.repo)}" target="_blank" rel="noopener">▶ Codespace</a>
+   </div></div>
+  <div class="rv"><div class="term"><div class="tb"><b></b><b></b><b></b><span>~/${esc(main.repo)}</span></div><pre id="typed"></pre></div></div>
+ </section>
+ <div class="panel rv"><h2>O que este projeto demonstra</h2><div class="comp">${f.comp.map(c=>`<div>${esc(c)}</div>`).join('')}</div>
+  ${f.stack.length?`<div class="tags" style="margin:16px 0 0">${f.stack.map(s=>`<span>${esc(s)}</span>`).join('')}</div>`:''}</div>
+ ${tot?`<div class="panel rv"><h2>Linguagens</h2>${langBar(f.langs)}<div class="legend">${ent.map(([l,v])=>`<span><i style="background:${COLORS[l]||'#8b949e'}"></i>${l} ${Math.round(v/tot*100)}%</span>`).join('')}</div></div>`:''}
+ <div class="panel rv"><h2>${f.repos.length>1?`Repositórios desta família (${f.repos.length})`:'Repositório'}</h2>
+  ${f.repos.map((r,k)=>`<div class="repo"><div>
+    <div class="rn">${esc(r.repo)}${k===0&&f.repos.length>1?' · principal':''}</div>
+    <h3>${esc(r.title)}</h3><p>${esc(r.summary||'Veja o README no GitHub.')}</p>
+    <div class="meta"><span>${r.files} arquivos</span><span>atualizado ${ago(r.date)}</span>${Object.keys(r.langs).length?`<span>${esc(Object.entries(r.langs).sort((a,b)=>b[1]-a[1]).slice(0,3).map(x=>x[0]).join(' · '))}</span>`:''}${status(r)}</div></div>
+    <div class="acts"><a class="btn sm" href="https://github.com/${USER}/${encodeURIComponent(r.repo)}" target="_blank" rel="noopener">GitHub ↗</a>${r.reserved?'':`<a class="btn sm" href="https://github.dev/${USER}/${encodeURIComponent(r.repo)}" target="_blank" rel="noopener">VS Code web</a>`}${r.demo[0]?`<a class="btn sm pri" href="${esc(r.demo[0])}" target="_blank" rel="noopener">Ao vivo ↗</a>`:''}</div>
+  </div>`).join('')}
+  ${f.cat==='oss'?'<p class="note">Estes repositórios são cópias ou adaptações de projetos de código aberto de outros autores. O crédito, o link do projeto original e a licença estão preservados em cada README. Eles mostram estudo, adaptação e deploy, não autoria do projeto original.</p>':''}
+  ${f.repos.some(r=>r.reserved)&&f.cat!=='oss'?'<p class="note">Itens marcados como "reservado / em construção" ainda não têm o código completo publicado.</p>':''}
+ </div>
+ <div class="acts rv" style="justify-content:space-between;margin-top:26px"><a class="btn" href="${href('/sobre/'+prev.slug)}" data-link>← ${esc(prev.title)}</a><a class="btn" href="${href('/sobre/'+next.slug)}" data-link>${esc(next.title)} →</a></div>`;
+ watch();typeTerm(f);scrollTo(0,0);
+}
+let typing=0;
+async function typeTerm(f){const id=++typing;const pre=$('#typed');const main=f.repos[0];const sleep=ms=>new Promise(r=>setTimeout(r,RM?0:ms));
+ const lang=Object.entries(f.langs).sort((a,b)=>b[1]-a[1])[0];
+ const lines=[['$ ',`git clone https://github.com/${USER}/${main.repo}`],['',`Cloning into '${main.repo}'... ok`,'m'],['$ ',`cd ${main.repo} && ls`],['',`${main.files} arquivos · ${lang?lang[0]:'docs'}`,'c'],['$ ','cat README.md | head -1'],['',main.title,'c']];
+ let html='';const e=s=>esc(s);
+ for(const [p,t,c] of lines){if(id!==typing)return;
+  if(p){html+=`<span class="p">${p}</span>`;for(let k=1;k<=t.length;k+=2){if(id!==typing)return;pre.innerHTML=html+e(t.slice(0,k))+'<span class="cursor"></span>';await sleep(18);}html+=e(t)+'\n';await sleep(200);}
+  else{html+=`<span class="${c}">${e(t)}</span>\n`;pre.innerHTML=html+'<span class="cursor"></span>';await sleep(160);}}
+ pre.innerHTML=html+'<span class="p">$ </span><span class="cursor"></span>';}
+
+function route(){const p=path().replace(/\/+$/,'')||'/';const m=p.match(/^\/sobre\/([\w.-]+)$/);const slug=m?m[1]:'';const f=D.fams.find(x=>x.slug===slug);
+ app.classList.remove('fade');void app.offsetWidth;app.classList.add('fade');
+ if(f)detail(f);else{if(p!=='/'&&!HASH)history.replaceState({},'','/');home();}}
+route();
+})();
+</script>
+</body>
+</html>
